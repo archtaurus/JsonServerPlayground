@@ -1,0 +1,32 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "First Blog",
+            "content": "Hello, World!",
+            "createdAt": 1614913570
+        },
+        {
+            "title": "Second Blog",
+            "content": "Another Post!",
+            "createdAt": 1614914251,
+            "id": 2
+        }
+    ],
+    "comments": [
+        {
+            "id": 1,
+            "body": "hello!",
+            "postId": 1,
+            "commentId": null,
+            "createdAt": 1614913686
+        },
+        {
+            "body": "hi!",
+            "postId": 1,
+            "commentId": 1,
+            "createdAt": 1614914459,
+            "id": 2
+        }
+    ]
+}

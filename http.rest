@@ -1,0 +1,36 @@
+### this file depend on REST Client extension for VSCOde
+@api=http://localhost:3000
+@page=1
+@limit=10
+@postId=1
+
+### GET posts by page
+GET {{api}}/posts?_sort=createdAt&_order=desc&_page={{page}}&_limit={{limit}}
+
+### GET post and its comments
+GET {{api}}/posts/{{postId}}?_embed=comments
+
+### GET post's comments
+
+GET  {{api}}/posts/1/comments
+
+### POST a post
+POST {{api}}/posts
+Content-Type: application/json
+
+{
+    "title": "Second Blog",
+    "content": "Another Post!",
+    "createdAt": {{$timestamp}}
+}
+
+###
+POST {{api}}/comments
+Content-Type: application/json
+
+{
+    "body": "haha!",
+    "postId": 1,
+    "commentId": 1,
+    "createdAt": {{$timestamp}}
+}
