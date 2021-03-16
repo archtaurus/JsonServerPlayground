@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Json-Server Playground</title>
+        <link rel="stylesheet" href="tailwind.min.css" />
+        <script src="alpine.min.js"></script>
+        <script src="axios.min.js"></script>
+    </head>
+    <body x-data="init()" x-init="loadTodos">
+        <h1 class="text-2xl font-bold">Json-Server Playground</h1>
+        <h2 class="font-bold">Todo List</h2>
+        <input type="text" x-model="newTodo" class="p-1 border" @keyup.enter="addTodo" />
+        <template x-for="todo in todos" :key="todo.id">
+            <p>
+                <span x-text="todo.title" class="cursor-pointer" :class="{'line-through':todo.finished}" @click="toggleTodo(todo)"></span>
+                <span class="cursor-pointer text-xs ml-2" title="delete" @click="deleteTodo(todo)">❌</span>
+            </p>
+        </template>
+        <script src="script.js"></script>
+    </body>
+</html>

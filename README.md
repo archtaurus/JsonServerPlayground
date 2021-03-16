@@ -7,7 +7,6 @@ This repository is a playground for [json-server](https://www.npmjs.com/package/
 ``` shell
 git clone git@github.com:archtaurus/JsonServerPlayground.git
 cd JsonServerPlayground
-npm i -D
-npm start
+npx json-server db.json
 curl "http://localhost:3000/posts?_sort=createdAt&_order=desc&&_page=1&_limit=10&_embed=comments"
 ```

@@ -28,5 +28,19 @@
             "createdAt": 1614914459,
             "id": 2
         }
+    ],
+    "todos": [
+        {
+            "id": 1,
+            "title": "Study JavaScript.",
+            "finished": true,
+            "createdAt": 1615910651985
+        },
+        {
+            "id": 2,
+            "title": "Say hello to the world!",
+            "finished": false,
+            "createdAt": 1615910741200
+        }
     ]
 }
