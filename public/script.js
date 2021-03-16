@@ -15,7 +15,6 @@ function init() {
         async addTodo() {
             try {
                 const response = await api.post('/todos', { title: this.newTodo, finished: false, createdAt: Date.now() })
-                console.log(response.data)
                 this.todos.unshift(response.data)
             } catch (error) {
                 console.error(error)
